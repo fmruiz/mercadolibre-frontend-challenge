@@ -1,0 +1,16 @@
+@mixin transition($property) {
+    transition: $property 5s;
+}
+
+@mixin flexible($display, $align, $justify: false, $direction: false) {
+    display: $display;
+    align-items: $align;
+
+    @if $justify {
+        justify-content: $justify;
+    }
+    @if $direction {
+        flex-direction: $direction;
+    }
+}
+
