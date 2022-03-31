@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { SearchBar, BreadCrumb, ProductListItem } from './components';
+import { SearchBar, BreadCrumb } from './components';
 import './App.styles.scss'
 
 const App: FC = () => {
@@ -8,7 +8,6 @@ const App: FC = () => {
       <SearchBar />
       <main className='app__main'>
         <BreadCrumb />
-        <ProductListItem />
       </main>
     </div>
   )

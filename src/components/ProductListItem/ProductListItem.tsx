@@ -7,7 +7,7 @@ export const ProductListItem: FC = () => {
     return (
         <div className='product-list-item'>
             <div className='product-list-item__container'>
-                <img className='product-list-item__image' />
+                <img className='product-list-item__image' alt='product-list-image'/>
                 <div className='product-list-item__description'>
                     <div className='product-list-item__container-price'>
                         <div className='product-list-item__shipping'>

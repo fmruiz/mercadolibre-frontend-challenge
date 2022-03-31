@@ -23,6 +23,8 @@
 
   &__image {
     margin-right: 30px;
+    width: $logo-width;
+    height: $logo-height;
   }
 
   &__input {
@@ -51,5 +53,10 @@
     cursor: pointer;
 
     @include flexible(flex, center, center);
+  }
+
+  &__icon {
+    width: $search-size;
+    height: $search-size;
   }
 }

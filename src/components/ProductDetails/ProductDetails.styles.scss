@@ -1,0 +1,71 @@
+@import "../../scss/abstracts/mixins";
+@import "../../scss/abstracts/variables";
+
+.product-details {
+  width: 100%;
+  background: white;
+  padding: $double-spacing;
+
+  @include flexible(flex, normal, normal, column);
+
+  &__price-container {
+    @include flexible(flex, normal);
+  }
+
+  &__image {
+    width: $product-details-img-size;
+    height: $product-details-img-size;
+  }
+
+  &__text-container {
+    margin-left: 60px;
+
+    @include flexible(flex, normal, normal, column);
+  }
+
+  &__sold {
+    font-size: $text-14;
+    color: $black;
+    margin-bottom: $small-spacing;
+  }
+
+  &__title {
+    font-size: $text-24;
+    color: $black;
+    width: 70%;
+    margin-bottom: $double-spacing;
+  }
+
+  &__price {
+    font-size: $text-46;
+    color: $black;
+    margin-bottom: $double-spacing;
+  }
+
+  &__button {
+    background: $blue;
+    color: white;
+    width: $button-width;
+    height: $button-height;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+
+  &__description-container {
+
+    @include flexible(flex, normal, normal, column);
+  }
+
+  &__subtitle {
+    color: $black;
+    font-size: $text-28;
+    margin-bottom: $double-spacing;
+  }
+
+  &__description {
+    font-size: $text-16;
+    color: $gray-light;
+    margin-bottom: $double-spacing;
+  }
+}
