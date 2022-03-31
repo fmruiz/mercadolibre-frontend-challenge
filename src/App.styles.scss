@@ -1,0 +1,9 @@
+@import './scss/abstracts/mixins';
+@import './scss/abstracts/variables';
+
+.app {
+    &__main {
+        width: $layout-width;
+        margin: 0 auto;
+    }
+}

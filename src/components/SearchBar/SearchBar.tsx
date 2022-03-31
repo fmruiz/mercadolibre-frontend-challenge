@@ -6,7 +6,7 @@ import Search from '../../assets/search.png'
 
 export const SearchBar: FC = () => {
     return (
-        <div className='search'>
+        <header className='search'>
             <div className='search__layout'>
                 <img className='search__image' src={Logo} />
                 <div className='search__input__container'>
@@ -16,6 +16,6 @@ export const SearchBar: FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

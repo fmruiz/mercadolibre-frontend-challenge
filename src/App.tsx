@@ -1,10 +1,14 @@
-import './App.scss'
-import { SearchBar } from './components';
+import { FC } from 'react';
+import { SearchBar, BreadCrumb } from './components';
+import './App.styles.scss'
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
+    <div className='app'>
       <SearchBar />
+      <main className='app__main'>
+        <BreadCrumb />
+      </main>
     </div>
   )
 }
