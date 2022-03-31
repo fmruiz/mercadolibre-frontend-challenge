@@ -11,7 +11,7 @@ export const SearchBar: FC = () => {
                 <img className='search__image' src={Logo} />
                 <div className='search__input__container'>
                     <input className='search__input' placeholder='Nunca dejes de buscar' />
-                    <div className='search__icon__container'>
+                    <div className='search__icon-container'>
                         <img className='search__icon' src={Search} />
                     </div>
                 </div>
