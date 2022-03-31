@@ -1,17 +1,10 @@
 import './App.scss'
+import { SearchBar } from './components';
 
 function App() {
   return (
     <div className="App">
-      <div className='test'>
-        <div>
-xxxxxx
-        </div>
-        <div>
-          asddsa
-        </div>
-      </div>
-        
+      <SearchBar />
     </div>
   )
 }
