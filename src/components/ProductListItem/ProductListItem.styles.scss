@@ -1,53 +1,64 @@
-@import '../../scss/abstracts/mixins';
-@import '../../scss/abstracts//variables';
+@import "../../scss/abstracts/mixins";
+@import "../../scss/abstracts//variables";
 
 .product-list-item {
-    background: white;
-    padding: $small-spacing;
+  background: white;
+  padding: $small-spacing;
+  border-bottom: 1px solid $gray-background;
+  cursor: pointer;
+
+  &__container {
+    display: flex;
+    width: 100%;
 
     @include flexible(flex, center);
+  }
 
-    &__container {
-        display: flex;
-        width: 100%;
-    }
+  &--0 {
+    border-top-left-radius: $img-smalll-radius;
+    border-top-right-radius: $img-smalll-radius;
+  }
+  
+  &__image-container {
+    width: $product-list-img-size;
+    height: $product-list-img-size;
+    @include flexible(flex, center, center);
+  }
 
-    &__image {
-        border-radius: $img-smalll-radius;
-        width: $product-list-img-size;
-        height: $product-list-img-size;
-        margin-right: $small-spacing;
-    }
+  &__image {
+    border-radius: $img-smalll-radius;
+    margin-right: $small-spacing;
+  }
 
-    &__description {
-        width: 80%;
-    }
+  &__description {
+    width: 80%;
+  }
 
-    &__container-price {
-        margin-top: 20px;
-        margin-bottom: $double-spacing;
-        width: 90%;
+  &__container-price {
+    margin-top: 20px;
+    margin-bottom: $double-spacing;
+    width: 90%;
 
-        @include flexible(flex, end, space-between)
-    }
+    @include flexible(flex, end, space-between);
+  }
 
-    &__shipping {
-        @include flexible(flex, center)
-    }
+  &__shipping {
+    @include flexible(flex, center);
+  }
 
-    &__location {
-        font-size: $text-12;
-        color: $gray-strong;
-    }
+  &__location {
+    font-size: $text-12;
+    color: $gray-strong;
+  }
 
-    &__price {
-        margin-right: 10px;
-        font-size: $text-24;
-    }
+  &__price {
+    margin-right: 10px;
+    font-size: $text-24;
+  }
 
-    &__title {
-        font-size: $text-18;
-        color: $black;
-        width: 50%;
-    }
+  &__title {
+    font-size: $text-18;
+    color: $black;
+    width: 50%;
+  }
 }

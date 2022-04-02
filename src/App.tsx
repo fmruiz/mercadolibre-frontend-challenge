@@ -3,9 +3,10 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './store/reducer';
 
-import { SearchBar, BreadCrumb } from './components';
+import { SearchBar, BreadCrumb, ProductListItem } from './components';
 import './App.styles.scss'
 import { Provider } from 'react-redux';
+import { ProductList } from './components';
 
 const store = createStore(rootReducer, compose(
   applyMiddleware(thunk),
@@ -15,12 +16,13 @@ const store = createStore(rootReducer, compose(
 const App: FC = () => {
   return (
     <Provider store={store}>
-      <div className='app'>
-        <SearchBar />
-        <main className='app__main'>
-          <BreadCrumb />
-        </main>
-      </div>
+        <div className='app'>
+          <SearchBar />
+          <main className='app__main'>
+            <BreadCrumb />
+            <ProductList/>
+          </main>
+        </div>
     </Provider>
 
   )

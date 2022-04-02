@@ -7,7 +7,7 @@ import { getAllProducts } from "../../store/actions";
 import { useDispatch } from "react-redux";
 
 export const SearchBar: FC = () => {
-    const [query, setQuery] = useState<string>("");
+    const [query, setQuery] = useState<string>("iphones");
 
     const dispatch = useDispatch();
 
