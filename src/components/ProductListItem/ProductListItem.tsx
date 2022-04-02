@@ -1,5 +1,6 @@
 import { FC } from "react";
 import "./ProductListItem.styles.scss";
+import { priceBuilder } from '../../common';
 
 import Shipping from "../../assets/shipping.png";
 
@@ -32,7 +33,7 @@ export const ProductListItem: FC<Props> = ({
       <div className="product-list-item__description">
         <div className="product-list-item__container-price">
           <div className="product-list-item__shipping">
-            <span className="product-list-item__price">$ {price}</span>
+            <span className="product-list-item__price">$ {priceBuilder(price)}</span>
             {free_shipping ? <img src={Shipping} alt="product-item" /> : null}
           </div>
           <span className="product-list-item__location">{city}</span>
