@@ -1,20 +1,32 @@
-import { ProductsAction } from '../types';
+import { ProductsAction } from "../types";
 
 interface ProductsState {
-    productsData: any
+  productsData: any;
+  product: any;
 }
 
 const initialState: ProductsState = {
-    productsData: undefined,
-}
+  productsData: undefined,
+  product: undefined,
+};
 
-export const productsReducer = (state = initialState, action: ProductsAction) => {
-    if (action.type === 'GET_ALL_PRODUCTS') {
-        return {
-            ...state,
-            productsData: action.payload
-        }
-    }
+export const productsReducer = (
+  state = initialState,
+  action: ProductsAction
+) => {
+  if (action.type === "GET_ALL_PRODUCTS") {
+    return {
+      ...state,
+      productsData: action.payload,
+    };
+  }
 
-    return state;
-}
+  if (action.type === "GET_PRODUCT_BY_ID") {
+    return {
+      ...state,
+      product: action.payload,
+    };
+  }
+
+  return state;
+};

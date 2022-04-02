@@ -26,6 +26,7 @@ export const ProductList: FC = () => {
           <Link key={id} to={`/items/${id}`}>
             <ProductListItem
               key={id}
+              id={id}
               index={index}
               image={picture}
               title={title}

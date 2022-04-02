@@ -2,9 +2,11 @@
 @import "../../scss/abstracts/variables";
 
 .product-details {
-  width: 100%;
   background: white;
   padding: $double-spacing;
+  width: 100%;
+  border-radius: $img-smalll-radius;
+  margin: 0 auto;
 
   @include flexible(flex, normal, normal, column);
 
@@ -53,7 +55,6 @@
   }
 
   &__description-container {
-
     @include flexible(flex, normal, normal, column);
   }
 
