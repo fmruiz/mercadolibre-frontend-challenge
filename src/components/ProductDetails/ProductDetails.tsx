@@ -1,7 +1,16 @@
 import { FC } from 'react'
 import './ProductDetails.styles.scss'
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/reducer';
 
 export const ProductDetails: FC = () => {
+
+    const { itemId } = useParams();
+    const { productsData } = useSelector((state: RootState) => state.products);
+
+    console.log(productsData?.items.find((e: any) => e.id === itemId));
+
     return (
         <div className='product-details'>
             <div className='product-details__price-container'>

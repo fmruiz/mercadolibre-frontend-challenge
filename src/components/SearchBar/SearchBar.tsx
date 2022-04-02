@@ -5,34 +5,38 @@ import Logo from "../../assets/logo.png";
 import Search from "../../assets/search.png";
 import { getAllProducts } from "../../store/actions";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 export const SearchBar: FC = () => {
-    const [query, setQuery] = useState<string>("iphones");
+  const [query, setQuery] = useState<string>("iphones");
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setQuery(e.target.value)
-    };
+  const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
 
-    return (
-        <header className="search">
-            <div className="search__layout">
-                <img className="search__image" src={Logo} alt="logo" />
-                <div className="search__input__container">
-                    <input
-                        className="search__input"
-                        placeholder="Nunca dejes de buscar"
-                        onChange={(e) => getInputValue(e)}
-                    />
-                    <div
-                        className="search__icon-container"
-                        onClick={() => dispatch(getAllProducts(query))}
-                    >
-                        <img className="search__icon" src={Search} alt="search-icon" />
-                    </div>
-                </div>
-            </div>
-        </header>
-    );
+  return (
+    <header className="search">
+      <div className="search__layout">
+        <img className="search__image" src={Logo} alt="logo" />
+        <div className="search__input__container">
+          <input
+            className="search__input"
+            placeholder="Nunca dejes de buscar"
+            onChange={(e) => getInputValue(e)}
+          />
+          <Link
+            className="search__icon-container"
+            to={"/items"}
+            onClick={() => {
+              dispatch(getAllProducts(query));
+            }}
+          >
+            <img className="search__icon" src={Search} alt="search-icon" />
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
 };
