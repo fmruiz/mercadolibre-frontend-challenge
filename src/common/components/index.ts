@@ -1,2 +1,3 @@
-export * from './BreadCrumb'
-export * from './NotResultsFound'
+export * from "./BreadCrumb";
+export * from "./NotResultsFound";
+export * from "./Loading";

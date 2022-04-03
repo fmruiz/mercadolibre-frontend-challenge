@@ -1,9 +1,14 @@
-import { FC } from "react";
+import { FC, lazy, Suspense } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { SearchBar, ProductList, ProductDetails } from "./components";
+import { SearchBar } from "./components";
+import { Loading } from "./common";
 import store from "./store";
 import "./App.styles.scss";
+
+const ProductDetails = lazy(() => import("./components/ProductDetails"));
+
+const ProductList = lazy(() => import("./components/ProductList"));
 
 const App: FC = () => {
   return (
@@ -11,10 +16,12 @@ const App: FC = () => {
       <Provider store={store}>
         <div className="app">
           <SearchBar />
-          <Routes>
-            <Route path="/items" element={<ProductList />} />
-            <Route path="/items/:itemId" element={<ProductDetails />} />
-          </Routes>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/items" element={<ProductList />} />
+              <Route path="/items/:itemId" element={<ProductDetails />} />
+            </Routes>
+          </Suspense>
         </div>
       </Provider>
     </BrowserRouter>
