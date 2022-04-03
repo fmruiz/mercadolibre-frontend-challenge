@@ -7,7 +7,7 @@ export const getAllProducts = (query: string) => async (dispatch: React.Dispatch
       .then((res) => res.data);
 
     dispatch({
-      type: 'GET_ALL_PRODUCTS',
+      type: "GET_ALL_PRODUCTS",
       payload: data,
     });
   } catch (error) {
@@ -21,10 +21,8 @@ export const getProductById = (id: string) => async (dispatch: React.Dispatch<an
       .get(`http://localhost:9000/api/items/${id}`)
       .then((res) => res.data);
 
-      console.log(data)
-
     dispatch({
-      type: 'GET_PRODUCT_BY_ID',
+      type: "GET_PRODUCT_BY_ID",
       payload: data,
     });
   } catch (error) {

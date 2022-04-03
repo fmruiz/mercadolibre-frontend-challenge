@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { ProductListItem } from "../ProductListItem";
 import { RootState } from "../../store/reducer";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { BreadCrumb, NotResultsFound } from "../../common";
 import "./ProductList.styles.scss";
 
