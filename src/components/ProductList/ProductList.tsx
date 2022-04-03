@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { ProductListItem } from "../ProductListItem";
 import { RootState } from "../../store/reducer";
 import { Link } from "react-router-dom";
+import { NotResultsFound } from "../../common";
 
 interface ProductsTypes {
   id: string;
@@ -15,6 +16,8 @@ interface ProductsTypes {
 
 export const ProductList: FC = () => {
   const { productsData } = useSelector((state: RootState) => state.products);
+
+  if(productsData?.items.length === 0) return <NotResultsFound />
 
   return (
     <ol className="product-list-main">

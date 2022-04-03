@@ -18,16 +18,12 @@
     border-top-left-radius: $img-smalll-radius;
     border-top-right-radius: $img-smalll-radius;
   }
-  
-  &__image-container {
-    width: $product-list-img-size;
-    height: $product-list-img-size;
-    @include flexible(flex, center, center);
-  }
 
   &__image {
     border-radius: $img-smalll-radius;
     margin-right: $small-spacing;
+    width: $product-list-img-size;
+    height: $product-list-img-size;
   }
 
   &__description {

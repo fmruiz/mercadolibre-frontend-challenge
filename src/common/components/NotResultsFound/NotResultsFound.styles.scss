@@ -1,0 +1,24 @@
+@import "../../../scss/abstracts/mixins";
+@import "../../../scss/abstracts/variables";
+
+.not-result {
+  border-radius: $img-smalll-radius;
+  height: 204px;
+  padding-top: 42px;
+  padding-bottom: 32px;
+  background-color: white;
+
+  @include flexible(flex, center, center, column);
+
+  &__title {
+      font-size: $text-24;
+  }
+
+  &__list {
+      margin-top: 18px;
+  }
+
+  &__list li {
+      list-style: inside;
+  }
+}

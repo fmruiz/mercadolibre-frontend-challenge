@@ -26,7 +26,7 @@ export const ProductListItem: FC<Props> = ({
   index,
   id,
 }) => {
-  
+
   const dispatch = useDispatch();
 
   return (
@@ -35,13 +35,11 @@ export const ProductListItem: FC<Props> = ({
       onClick={() => dispatch(getProductById(id))}
     >
       <div className="product-list-item__container">
-        <div className="product-list-item__image-container">
           <img
             src={image}
             className="product-list-item__image"
             alt="product-list-image"
           />
-        </div>
         <div className="product-list-item__description">
           <div className="product-list-item__container-price">
             <div className="product-list-item__shipping">

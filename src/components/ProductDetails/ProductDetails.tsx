@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import "./ProductDetails.styles.scss";
 import { RootState } from "../../store/reducer";
-import { priceBuilder } from '../../common';
+import { NotResultsFound, priceBuilder } from '../../common';
 
 export const ProductDetails: FC = () => {
   const { itemId } = useParams();
@@ -13,7 +13,7 @@ export const ProductDetails: FC = () => {
 
   const productId = productsData?.items.find((e: any) => e.id === itemId);
 
-  if (!productId) return null;
+  if (!productId) return <NotResultsFound />;
   
   return (
     <div className="product-details">
