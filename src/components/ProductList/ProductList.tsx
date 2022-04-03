@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import { NotResultsFound } from "../../common";
 
 interface ProductsTypes {
-  id: string;
-  picture: string;
-  title: string;
-  price: { amount: number };
-  free_shipping: boolean;
-  city: string;
+  id: string
+  picture: string
+  title: string
+  price: { amount: number }
+  free_shipping: boolean
+  city: string
 }
 
 export const ProductList: FC = () => {

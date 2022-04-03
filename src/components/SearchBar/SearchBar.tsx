@@ -6,9 +6,10 @@ import Search from "../../assets/search.png";
 import { getAllProducts } from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { SEARCH_BAR_PLACEHOLDER } from './constants';
 
 export const SearchBar: FC = () => {
-  const [query, setQuery] = useState<string>("iphones");
+  const [query, setQuery] = useState<string>("");
 
   const dispatch = useDispatch();
 
@@ -23,7 +24,7 @@ export const SearchBar: FC = () => {
         <div className="search__input__container">
           <input
             className="search__input"
-            placeholder="Nunca dejes de buscar"
+            placeholder={SEARCH_BAR_PLACEHOLDER}
             onChange={(e) => getInputValue(e)}
           />
           <Link
