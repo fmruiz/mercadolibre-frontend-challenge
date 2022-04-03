@@ -19,11 +19,13 @@ export const SearchBar: FC = () => {
         <img className="search__image" src={Logo} alt="logo" />
         <div className="search__input__container">
           <input
+            data-test-id="search-input"
             className="search__input"
             placeholder={SEARCH_BAR_PLACEHOLDER}
             onChange={(e) => setQuery(e.target.value)}
           />
           <Link
+            data-test-id="search-button"
             className="search__icon-container"
             to={"/items"}
             onClick={() => {

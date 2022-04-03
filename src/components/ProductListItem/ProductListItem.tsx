@@ -30,6 +30,7 @@ export const ProductListItem: FC<Props> = ({
 
   return (
     <li
+      data-test-id="product-list-item"
       className={`product-list-item product-list-item--${index}`}
       onClick={() => dispatch(getProductById(id))}
     >

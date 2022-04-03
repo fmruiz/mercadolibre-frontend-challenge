@@ -24,7 +24,7 @@ export const ProductList: FC = () => {
   return (
     <div className="product-list-main">
       <BreadCrumb />
-      <ol className="product-list-main__list">
+      <ol data-test-id="product-list" className="product-list-main__list">
         {productsData?.items?.map(
           (
             { id, picture, title, price, free_shipping, city }: ProductsTypes,
