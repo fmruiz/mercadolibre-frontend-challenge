@@ -1,13 +1,39 @@
+import { ProductsDataType, ProductType } from "../../types";
 import { ProductsAction } from "../types";
 
 interface ProductsState {
-  productsData: any;
-  product: any;
+  productsData: ProductsDataType;
+  product: ProductType;
 }
 
 const initialState: ProductsState = {
-  productsData: undefined,
-  product: undefined,
+  productsData: {
+    author: {
+      name: '',
+      lastname: ''
+    },
+    categories: [],
+    items: [],
+  },
+  product: {
+    author: {
+      name: '',
+      lastname: '',
+    },
+    item: {
+      id: '',
+      title: '',
+      price: {
+        currency: '',
+        amount: 0,
+      },
+      picture: '',
+      condition: '',
+      free_shiping: undefined,
+      sold_quantity: 0,
+      description: '',
+    }
+  },
 };
 
 export const productsReducer = (
