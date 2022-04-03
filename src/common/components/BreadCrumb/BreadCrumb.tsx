@@ -10,7 +10,9 @@ export const BreadCrumb: React.FC = () => {
 
   return (
     <p className="breadcrumb">
-      {`${categories ?  `${categories[0]} >` : ''} ${items && items[0].title.split(" ").shift()}`}
+      {`${
+        categories && categories[0] !== undefined ? `${categories[0]} >` : ""
+      } ${items ? items[0].title.split(" ").shift() : ""}`}
     </p>
   );
 };
