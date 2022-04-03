@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { useState } from "react";
 import "./SearchBar.styles.scss";
 
 import Logo from "../../assets/logo.png";
@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { SEARCH_BAR_PLACEHOLDER } from "./constants";
 
-export const SearchBar: FC = () => {
+export const SearchBar: React.FC = () => {
   const [query, setQuery] = useState<string>("");
 
   const dispatch = useDispatch();

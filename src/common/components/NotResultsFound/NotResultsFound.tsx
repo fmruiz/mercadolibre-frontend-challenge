@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React from "react";
 import "./NotResultsFound.styles.scss";
 import {
   NOT_FOUND_TITLE,
@@ -6,7 +6,7 @@ import {
   NOT_FOUND_LIST_TWO,
 } from "./constants";
 
-export const NotResultsFound: FC = () => {
+export const NotResultsFound: React.FC = () => {
   return (
     <div className="not-result">
       <h4 className="not-result__title">{NOT_FOUND_TITLE}</h4>

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { ProductListItem } from "../ProductListItem";
 import { RootState } from "../../store/reducer";
@@ -15,7 +15,7 @@ interface ProductsTypes {
   city: string;
 }
 
-export const ProductList: FC = () => {
+export const ProductList: React.FC = () => {
   const { productsData } = useSelector((state: RootState) => state.products);
 
   // check if there are no search results

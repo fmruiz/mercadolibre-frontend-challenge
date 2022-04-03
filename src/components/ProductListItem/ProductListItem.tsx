@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 
 import "./ProductListItem.styles.scss";
@@ -17,7 +17,7 @@ interface Props {
   id: string;
 }
 
-export const ProductListItem: FC<Props> = ({
+export const ProductListItem: React.FC<Props> = ({
   image,
   title,
   price,

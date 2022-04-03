@@ -1,6 +1,6 @@
-import { FC } from "react";
+import React from "react";
 
-export const Loading: FC = () => {
+export const Loading: React.FC = () => {
   return (
     <div className="loading">
       <span className="loading__text">Loading...</span>
