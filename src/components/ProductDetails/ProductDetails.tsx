@@ -9,9 +9,11 @@ import { BUY_BUTTON_LABEL, DESCRIPTION_TITLE } from "./constants";
 
 export const ProductDetails: FC = () => {
   const { itemId } = useParams();
+
   const { productsData } = useSelector((state: RootState) => state.products);
   const { product } = useSelector((state: RootState) => state.products);
 
+  // find clicked product by id
   const productId = productsData?.items.find((e: any) => e.id === itemId);
 
   if (!productId) return <NotResultsFound />;

@@ -18,6 +18,7 @@ interface ProductsTypes {
 export const ProductList: FC = () => {
   const { productsData } = useSelector((state: RootState) => state.products);
 
+  // check if there are no search results
   if (productsData?.items.length === 0) return <NotResultsFound />;
 
   return (

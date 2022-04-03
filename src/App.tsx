@@ -6,8 +6,8 @@ import { Loading } from "./common";
 import store from "./store";
 import "./App.styles.scss";
 
+// using React Lazy for dinamic components
 const ProductDetails = lazy(() => import("./components/ProductDetails"));
-
 const ProductList = lazy(() => import("./components/ProductList"));
 
 const App: FC = () => {

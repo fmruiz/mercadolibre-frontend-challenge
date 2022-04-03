@@ -6,16 +6,12 @@ import Search from "../../assets/search.png";
 import { getAllProducts } from "../../store/actions";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { SEARCH_BAR_PLACEHOLDER } from './constants';
+import { SEARCH_BAR_PLACEHOLDER } from "./constants";
 
 export const SearchBar: FC = () => {
   const [query, setQuery] = useState<string>("");
 
   const dispatch = useDispatch();
-
-  const getInputValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value);
-  };
 
   return (
     <header className="search">
@@ -25,7 +21,7 @@ export const SearchBar: FC = () => {
           <input
             className="search__input"
             placeholder={SEARCH_BAR_PLACEHOLDER}
-            onChange={(e) => getInputValue(e)}
+            onChange={(e) => setQuery(e.target.value)}
           />
           <Link
             className="search__icon-container"
