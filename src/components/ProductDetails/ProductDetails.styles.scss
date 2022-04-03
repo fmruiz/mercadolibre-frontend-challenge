@@ -2,13 +2,17 @@
 @import "../../scss/abstracts/variables";
 
 .product-details {
-  background: white;
-  padding: $double-spacing;
-  width: 100%;
-  border-radius: $img-smalll-radius;
+  width: $layout-width;
   margin: 0 auto;
 
   @include flexible(flex, normal, normal, column);
+
+  &__container {
+    background: white;
+    padding: $double-spacing;
+    border-radius: $img-smalll-radius;
+    margin: 0 auto;
+  }
 
   &__price-container {
     @include flexible(flex, normal);

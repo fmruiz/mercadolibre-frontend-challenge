@@ -1,0 +1,8 @@
+@import "./scss/abstracts/variables";
+
+.app {
+  &__body {
+    width: $layout-width;
+    margin: 0 auto;
+  }
+}
