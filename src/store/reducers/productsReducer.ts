@@ -13,7 +13,7 @@ const initialState: ProductsState = {
       lastname: ''
     },
     categories: [],
-    items: [],
+    items: undefined,
   },
   product: {
     author: {

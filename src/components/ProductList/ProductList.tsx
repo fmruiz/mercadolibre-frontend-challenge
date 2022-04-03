@@ -19,13 +19,13 @@ export const ProductList: FC = () => {
   const { productsData } = useSelector((state: RootState) => state.products);
 
   // check if there are no search results
-  if (productsData?.items.length === 0) return <NotResultsFound />;
+  if (productsData?.items?.length === 0) return <NotResultsFound />;
 
   return (
     <div className="product-list-main">
       <BreadCrumb />
       <ol className="product-list-main__list">
-        {productsData?.items.map(
+        {productsData?.items?.map(
           (
             { id, picture, title, price, free_shipping, city }: ProductsTypes,
             index: number

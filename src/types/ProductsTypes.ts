@@ -4,7 +4,7 @@ export interface ProductsDataType {
     lastname: string;
   };
   categories: string[];
-  items: object[];
+  items: object[] | undefined;
 }
 
 export interface ProductType {
